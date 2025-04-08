@@ -5,33 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СмартЦентр Укртрансбезпека</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+        }
+
+        .header {
+            text-align: center;
+            padding-top: 50px;
+            background: linear-gradient(135deg, #29b6f6, #0288d1);
+            color: white;
+            padding: 40px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .card h2 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card .description {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Анімація заголовка */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Футер */
+        footer {
+            background-color: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ffc107;
+        }
+
+        /* Мобільна адаптація */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>СмартЦентр Укртрансбезпека</h1>
+    <div class="header">
+        <h1>СмартЦентр Укртрансбезпека</h1>
+    </div>
+
+    <div class="content">
+        <div class="card" id="video-materials">
+            <img src="https://i1.adis.ws/i/canon/xa75-ambient_range-page_f17d2dbab1e445249df20d2624b9ba6b?w=700" alt="Відео матеріали">
+            <h2>Відео матеріали</h2>
+            <p class="description">Навчальні відео, інструкції та пояснення у форматі відео.</p>
         </div>
 
-        <div class="content">
-            <div class="card" id="video-materials">
-                <img src="https://i1.adis.ws/i/canon/xa75-ambient_range-page_f17d2dbab1e445249df20d2624b9ba6b?w=700" alt="Відео матеріали">
-                <h2>Відео матеріали</h2>
-                <p class="description">Навчальні відео, інструкції та пояснення у форматі відео.</p>
-            </div>
+        <div class="card" id="presentation-materials">
+            <img src="https://faktyday.com.ua/wp-content/uploads/2024/12/sho-take-prezentaciya-780x450.jpg" alt="Презентаційні матеріали">
+            <h2>Презентаційні матеріали</h2>
+            <p class="description">Слайди, інфографіка та інші матеріали для ознайомлення.</p>
+        </div>
 
-            <div class="card" id="presentation-materials">
-                <img src="https://faktyday.com.ua/wp-content/uploads/2024/12/sho-take-prezentaciya-780x450.jpg" alt="Презентаційні матеріали">
-                <h2>Презентаційні матеріали</h2>
-                <p class="description">Слайди, інфографіка та інші матеріали для ознайомлення.</p>
-            </div>
-
-            <div class="card" id="test-section">
-                <img src="https://olevsk-gromada.gov.ua/wp-content/uploads/2017/09/test_angl_yazyk.png" alt="Тестування">
-                <h2>Тестування</h2>
-                <p class="description">Перевірка знань співробітників у зручному форматі.</p>
-            </div>
+        <div class="card" id="test-section">
+            <img src="https://olevsk-gromada.gov.ua/wp-content/uploads/2017/09/test_angl_yazyk.png" alt="Тестування">
+            <h2>Тестування</h2>
+            <p class="description">Перевірка знань співробітників у зручному форматі.</p>
         </div>
     </div>
+
+    <!-- Футер з контактами чи додатковими ресурсами -->
+    <footer>
+        <p>&copy; 2025 СмартЦентр Укртрансбезпека | <a href="#">Контакти</a></p>
+    </footer>
 
     <script>
         document.getElementById('video-materials').addEventListener('click', function() {
