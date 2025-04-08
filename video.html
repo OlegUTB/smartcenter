@@ -10,26 +10,80 @@
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
             text-align: center;
             color: white;
-            padding-top: 20px;
+            padding-top: 40px;
+            font-size: 36px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         }
 
         .video-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 20px;
+            padding: 40px 20px;
             justify-items: center;
+            animation: fadeIn 1s ease;
         }
 
         .video-container iframe {
             width: 280px;
-            height: 153px;
+            height: 160px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
+
+        .video-container iframe:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .back-btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 20px;
+        }
+
+        .back-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #29b6f6;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0288d1;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -78,8 +132,10 @@
             <iframe src="https://www.youtube.com/embed/example10" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+
+    <!-- Кнопка повернення назад -->
+    <div class="back-btn-wrapper">
+        <button class="back-btn" onclick="history.back()">← Повернутися назад</button>
+    </div>
 </body>
 </html>
-<div class="back-btn-wrapper">
-    <button class="back-btn" onclick="history.back()">← Повернутися назад</button>
-</div>
