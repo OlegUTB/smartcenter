@@ -9,10 +9,11 @@
             background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230525/pngtree-the-waves-and-wavy-lines-in-blue-are-dark-image_2625532.jpg');
             background-size: cover;
             background-position: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -21,26 +22,29 @@
             padding-top: 40px;
             font-size: 36px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
         }
 
         .video-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             padding: 40px 20px;
             justify-items: center;
-            animation: fadeIn 1s ease;
+            animation: fadeIn 1s ease-out;
         }
 
         .video-container iframe {
             width: 280px;
             height: 160px;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
 
         .video-container iframe:hover {
             transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
         h2 {
@@ -134,7 +138,7 @@
     </div>
 
     <!-- Кнопка повернення назад -->
-     <div class="back-btn-wrapper">
+    <div class="back-btn-wrapper">
         <button class="back-btn" onclick="history.back()">← Повернутися назад</button>
     </div>
 </body>
