@@ -14,33 +14,39 @@
 
         <div class="content">
             <div class="card" id="video-materials">
-                <h2>Відео матеріали</h2>
                 <img src="https://i1.adis.ws/i/canon/xa75-ambient_range-page_f17d2dbab1e445249df20d2624b9ba6b?w=700&sm=aspect&aspect=1:1&fmt=jpg&fmt.options=interlaced&bg=rgb(245,246,246)" alt="Відео матеріали">
+                <h2>Відео матеріали</h2>
+                <p class="description">Навчальні відео, інструкції та пояснення у форматі відео.</p>
+                <button class="card-btn">Перейти</button>
             </div>
 
             <div class="card" id="presentation-materials">
-                <h2>Презентаційні матеріали</h2>
                 <img src="https://faktyday.com.ua/wp-content/uploads/2024/12/sho-take-prezentaciya-780x450.jpg" alt="Презентаційні матеріали">
+                <h2>Презентаційні матеріали</h2>
+                <p class="description">Слайди, інфографіка та інші матеріали для ознайомлення.</p>
+                <button class="card-btn">Перейти</button>
             </div>
 
-            <div class="card" id="testing">
-                <h2>Тестування</h2>
+            <div class="card" id="test-section">
                 <img src="https://olevsk-gromada.gov.ua/wp-content/uploads/2017/09/test_angl_yazyk.png" alt="Тестування">
+                <h2>Тестування</h2>
+                <p class="description">Перевірка знань співробітників у зручному форматі.</p>
+                <button class="card-btn">Перейти</button>
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById('video-materials').addEventListener('click', function() {
-            window.location.href = 'video.html';
-        });
-
-        document.getElementById('presentation-materials').addEventListener('click', function() {
-            window.location.href = 'presentation.html';
-        });
-
-        document.getElementById('testing').addEventListener('click', function() {
-            window.location.href = 'test.html';
+        document.querySelectorAll('.card').forEach((card) => {
+            card.querySelector('.card-btn').addEventListener('click', () => {
+                if (card.id === 'video-materials') {
+                    window.location.href = 'video.html';
+                } else if (card.id === 'presentation-materials') {
+                    window.location.href = 'presentation.html';
+                } else if (card.id === 'test-section') {
+                    window.location.href = 'test.html';
+                }
+            });
         });
     </script>
 </body>
