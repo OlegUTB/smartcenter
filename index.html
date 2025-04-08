@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СмартЦентр Укртрансбезпека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>СмартЦентр Укртрансбезпека</h1>
+        </div>
+
+        <div class="content">
+            <div class="card" id="video-materials">
+                <h2>Відео матеріали</h2>
+                <img src="https://i1.adis.ws/i/canon/xa75-ambient_range-page_f17d2dbab1e445249df20d2624b9ba6b?w=700&sm=aspect&aspect=1:1&fmt=jpg&fmt.options=interlaced&bg=rgb(245,246,246)" alt="Відео матеріали">
+            </div>
+
+            <div class="card" id="presentation-materials">
+                <h2>Презентаційні матеріали</h2>
+                <img src="https://faktyday.com.ua/wp-content/uploads/2024/12/sho-take-prezentaciya-780x450.jpg" alt="Презентаційні матеріали">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('video-materials').addEventListener('click', function() {
+            window.location.href = 'video.html';  // Ваша сторінка для відео
+        });
+
+        document.getElementById('presentation-materials').addEventListener('click', function() {
+            window.location.href = 'presentation.html';  // Ваша сторінка для презентацій
+        });
+    </script>
+</body>
+</html>
