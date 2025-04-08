@@ -4,22 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Відео матеріали</title>
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230525/pngtree-the-waves-and-wavy-lines-in-blue-are-dark-image_2625532.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
 </head>
 <body>
     <h1>Відео матеріали</h1>
 
-    <!-- 10 відео, кожне в окремому блоці -->
-    <div>
-        <h2>Відео 1</h2>
-        <iframe width="280" height="156" src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    <!-- Контейнер для відео -->
+    <div class="video-container">
+        <div>
+            <h2>Відео 1</h2>
+            <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 2</h2>
+            <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 3</h2>
+            <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 4</h2>
+            <iframe src="https://www.youtube.com/embed/example4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 5</h2>
+            <iframe src="https://www.youtube.com/embed/example5" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 6</h2>
+            <iframe src="https://www.youtube.com/embed/example6" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 7</h2>
+            <iframe src="https://www.youtube.com/embed/example7" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 8</h2>
+            <iframe src="https://www.youtube.com/embed/example8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 9</h2>
+            <iframe src="https://www.youtube.com/embed/example9" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2>Відео 10</h2>
+            <iframe src="https://www.youtube.com/embed/example10" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
-    <div>
-        <h2>Відео 2</h2>
-        <iframe width="280" height="156" src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <!-- Додати більше відео за таким самим принципом -->
-
-    <!-- Кнопка повернення -->
-    <button onclick="window.history.back();">Повернутися назад</button>
 </body>
 </html>
