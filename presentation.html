@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Презентаційні матеріали</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230525/pngtree-the-waves-and-wavy-lines-in-blue-are-dark-image_2625532.jpg');
             background-size: cover;
             background-position: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: white;
             margin: 0;
             padding: 0;
@@ -33,32 +34,34 @@
         }
 
         .presentation-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             width: 100%;
-            max-width: 250px;
+            max-width: 270px;
+            backdrop-filter: blur(5px); /* Додаємо ефект розмиття */
         }
 
         .presentation-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
         }
 
         .presentation-item a {
             font-size: 18px;
-            color: #29b6f6;
+            color: #ff4081; /* Рожевий колір */
             text-decoration: none;
             font-weight: bold;
             display: block;
+            transition: color 0.3s ease;
         }
 
         .presentation-item a:hover {
-            color: #0288d1;
+            color: #d81b60; /* Темніший рожевий при наведенні */
         }
 
         .back-btn-wrapper {
@@ -68,7 +71,7 @@
         }
 
         .back-btn {
-            padding: 12px 24px;
+            padding: 14px 28px;
             font-size: 16px;
             background-color: #29b6f6;
             color: #fff;
@@ -81,7 +84,7 @@
 
         .back-btn:hover {
             background-color: #0288d1;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         @keyframes fadeIn {
