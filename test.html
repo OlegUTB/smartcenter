@@ -143,31 +143,30 @@
             <h2>Відео 1</h2>
             <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div>
-            <h2>Відео 2</h2>
-            <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div>
-            <h2>Відео 3</h2>
-            <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
-        </div>
     </div>
 
     <h2>Тестування для працівників</h2>
     <div class="test-container">
         <form id="quizForm">
             <div class="question">
-                <label>1. Що таке HTML?</label><br>
-                <input type="radio" name="q1" value="a"> Мова стилізації<br>
-                <input type="radio" name="q1" value="b"> Мова розмітки<br>
-                <input type="radio" name="q1" value="c"> Мова програмування<br>
+                <label>1. Обмеження або заборона руху в денну пору доби здійснюється у разі коли:</label><br>
+                <input type="radio" name="q1" value="a"> температура повітря: вище +30 С<br>
+                <input type="radio" name="q1" value="b"> температура дорожнього покриття: вище +28 С<br>
+                <input type="radio" name="q1" value="c"> температура повітря: вище +28 С<br>
             </div>
             <div class="question">
-                <label>2. Який тег використовують для вставки відео з YouTube?</label><br>
-                <input type="radio" name="q2" value="a"> &lt;video&gt;<br>
-                <input type="radio" name="q2" value="b"> &lt;embed&gt;<br>
-                <input type="radio" name="q2" value="c"> &lt;iframe&gt;<br>
+                <label>2. Журнал ІНТЕРБУС нараховує ___? _____ листів?</label><br>
+                <input type="radio" name="q2" value="a"> журнал Інтербус нараховує 25 листів<br>
+                <input type="radio" name="q2" value="b"> журнал Інтербус нараховує 50 листів<br>
+                <input type="radio" name="q2" value="c"> журнал Інтербус нараховує 14 листів<br>
             </div>
+            <div class="question">
+                <label>3. Ліцензії з провадження господарської діяльності з перевезення пасажирів, небезпечних вантажів та небезпечних відходів автомобільним транспортом оформлюються для:</label><br>
+                <input type="radio" name="q3" value="a"> українських та іноземних перевізників<br>
+                <input type="radio" name="q3" value="b"> українських перевізників<br>
+                <input type="radio" name="q3" value="c"> іноземних перевізників<br>
+            </div>
+            <!-- Додаємо решту питань тут -->
             <button type="button" onclick="checkAnswers()">Перевірити</button>
         </form>
         <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
@@ -183,8 +182,10 @@
             const form = document.getElementById('quizForm');
             let score = 0;
             const answers = {
-                q1: 'b',
-                q2: 'c'
+                q1: 'c',
+                q2: 'b',
+                q3: 'a',
+                // Додаємо правильні відповіді для решти питань
             };
 
             for (let key in answers) {
@@ -194,7 +195,7 @@
                 }
             }
 
-            document.getElementById('result').innerText = `Ви набрали ${score} з 2 правильних відповідей.`;
+            document.getElementById('result').innerText = `Ви набрали ${score} з 3 правильних відповідей.`;
         }
     </script>
 </body>
