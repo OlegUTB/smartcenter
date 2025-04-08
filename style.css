@@ -1,53 +1,85 @@
-* {
+/* Базовий стиль сторінки */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://media.istockphoto.com/id/859916128/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B8%D0%BA-%D0%B5%D0%B4%D0%B5%D1%82-%D0%BF%D0%BE-%D0%B0%D1%81%D1%84%D0%B0%D0%BB%D1%8C%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B5-%D0%B2-%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B9-%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D0%B0%D1%82%D0%B5-%D1%81-%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%BC%D0%B8-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=dTnNpOP3om7Xq83IyGbh06kpeCGep7SiyfUmAml_OdE=');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    height: 100vh;
-}
-
+/* Контейнер */
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Заголовок */
+.header {
     text-align: center;
-    padding-top: 100px;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease;
 }
 
 .header h1 {
-    font-size: 3em;
-    margin-bottom: 50px;
+    font-size: 38px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #29b6f6;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
+/* Контент-сітка */
 .content {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
+/* Картки */
 .card {
-    width: 300px;
-    height: 350px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
     overflow: hidden;
-    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+    font-size: 20px;
+    padding: 15px 10px 10px;
+    color: #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Анімація заголовку */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
