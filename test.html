@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відео матеріали та тест</title>
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230525/pngtree-the-waves-and-wavy-lines-in-blue-are-dark-image_2625532.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+        }
+
+        .test-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Відео матеріали</h1>
+
+    <div class="video-container">
+        <!-- Вставити відео -->
+    </div>
+
+    <h2>Тестування для працівників</h2>
+    <div class="test-container">
+        <form id="quizForm">
+            <div class="question">
+                <label>1. Що таке HTML?</label><br>
+                <input type="radio" name="q1" value="a"> Мова стилізації<br>
+                <input type="radio" name="q1" value="b"> Мова розмітки<br>
+                <input type="radio" name="q1" value="c"> Мова програмування<br>
+            </div>
+            <div class="question">
+                <label>2. Який тег використовують для вставки відео з YouTube?</label><br>
+                <input type="radio" name="q2" value="a"> &lt;video&gt;<br>
+                <input type="radio" name="q2" value="b"> &lt;embed&gt;<br>
+                <input type="radio" name="q2" value="c"> &lt;iframe&gt;<br>
+            </div>
+            <button type="button" onclick="checkAnswers()">Перевірити</button>
+        </form>
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const form = document.getElementById('quizForm');
+            let score = 0;
+            const answers = {
+                q1: 'b',
+                q2: 'c'
+            };
+
+            for (let key in answers) {
+                const selected = form.elements[key].value;
+                if (selected === answers[key]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('result').innerText = `Ви набрали ${score} з 2 правильних відповідей.`;
+        }
+    </script>
+</body>
+</html>
